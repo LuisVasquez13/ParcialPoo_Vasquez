@@ -11,7 +11,7 @@ public class Program
         var m3 = new Materia("Matemáticas", "MAT105", 2, 25, 20);
 
         // Crear estudiantes
-        var e1 = new Estudiante("Luis Pérez", "E001", "Ingeniería");
+        var e1 = new Estudiante("Luis Vásquez", "E001", "Ingeniería");
         var e2 = new Estudiante("Ana Gómez", "E002", "Informática");
         var e3 = new EstudianteBecado("Carlos Ruiz", "E003", "Sistemas", 50);
 
@@ -42,6 +42,7 @@ public class Program
             c1, c2, c3
         };
 
+        // Iterar y mostrar datos usando polimorfismo
         Console.WriteLine("-- POLIMORFISMO: MostrarDatos() =");
         foreach (IMostrable i in items) // Iterar sobre la lista de IMostrable
         {

@@ -7,11 +7,14 @@ using ParcialPoo_Vásquez.Clases;
 
 namespace ParcialPoo_Vásquez.Clases
 {
+    // Clase Estudiante que implementa la interfaz IMostrable
     public class Estudiante : IMostrable
     {
+        // Atributos privados
         private string nombre;
         private string id;
         private string carrera;
+        // Lista para almacenar las calificaciones del estudiante
         private List<Calificacion> calificaciones = new List<Calificacion>();
 
         public string Nombre
@@ -20,15 +23,17 @@ namespace ParcialPoo_Vásquez.Clases
             set => nombre = value ?? throw new ArgumentException("El nombre no puede ser nulo");
         }
 
-        public string Id
+        public string Id // Propiedad Id con validación
         {
             get => id;
+            // Validar que el ID no sea nulo
             set => id = value ?? throw new ArgumentException("El ID no puede ser nulo");
         }
 
-        public string Carrera
+        public string Carrera // Propiedad Carrera con validación
         {
             get => carrera;
+            // Validar que la carrera no sea nula
             set => carrera = value ?? throw new ArgumentException("La carrera no puede ser nula");
         }
 

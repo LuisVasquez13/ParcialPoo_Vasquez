@@ -38,7 +38,7 @@ namespace ParcialPoo_Vásquez.Clases
         public override void MostrarDatos()
         {
             // Mostrar información del estudiante becado
-            Console.WriteLine($"Estudiante Becado: {Nombre} | Carrera: {Carrera} | %Beca: {PorcentajeBeca}% | Promedio: {CalcularPromedio():F2}");
+            Console.WriteLine($"Estudiante Becado: {Nombre} | Carrera: {Carrera} | Porcentaje Beca: {PorcentajeBeca}% | Promedio: {CalcularPromedio():F2}");
         }
     }
 }

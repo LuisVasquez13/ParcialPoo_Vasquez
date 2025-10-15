@@ -56,7 +56,7 @@ namespace ParcialPoo_Vásquez.Clases
         public void MostrarDatos()
         {
             // Mostrar información de la calificación
-            Console.WriteLine($"Calificación → Estudiante: {Estudiante.Nombre}, Materia: {Materia.Nombre}, Nota: {Nota}");
+            Console.WriteLine($"Calificación de Estudiante: {Estudiante.Nombre}, Materia: {Materia.Nombre}, Nota: {Nota}");
         }
     }
 }

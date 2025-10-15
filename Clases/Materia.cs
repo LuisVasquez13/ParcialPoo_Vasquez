@@ -20,30 +20,32 @@ namespace ParcialPoo_Vásquez.Clases
         public string Nombre
         {
             get => nombre;
+            // Validar que el nombre no sea nulo
             set => nombre = value ?? throw new ArgumentException("El nombre no puede ser nulo");
         }
 
-        public string Codigo
+        public string Codigo // Propiedad Código con validación
         {
             get => codigo;
+            // Validar que el código no sea nulo
             set => codigo = value ?? throw new ArgumentException("El código no puede ser nulo");
         }
 
-        public int Creditos
+        public int Creditos // Propiedad Créditos con validación
         {
             get => creditos;
             set
-            {
+            { // Validar que los créditos sean mayores que 0
                 if (value <= 0) throw new ArgumentException("Los créditos deben ser mayores que 0");
                 creditos = value;
             }
         }
 
-        public int Cupos
+        public int Cupos // Propiedad Cupos con validación
         {
             get => cupos;
             set
-            {
+            { // Validar que los cupos sean mayores o iguales a 0
                 if (value < 0) throw new ArgumentException("Los cupos deben ser mayores o iguales a 0");
                 cupos = value;
             }
@@ -54,7 +56,7 @@ namespace ParcialPoo_Vásquez.Clases
             get => inscritos;
             set
             {
-                if (value < 0 || value > Cupos)
+                if (value < 0 || value > Cupos) // Validar que los inscritos estén entre 0 y el número de cupos
                     throw new ArgumentException("Los inscritos deben estar entre 0 y el número de cupos");
                 inscritos = value;
             }
@@ -81,6 +83,7 @@ namespace ParcialPoo_Vásquez.Clases
         // Método MostrarDatos para implementar la interfaz IMostrable
         public void MostrarDatos()
         {
+            // Mostrar información de la materia
             Console.WriteLine($"Materia: {Nombre} | Código: {Codigo} | Créditos: {Creditos} | Cupos/Inscritos: {Cupos}/{Inscritos}");
         }
     }
