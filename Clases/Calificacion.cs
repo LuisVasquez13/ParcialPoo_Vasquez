@@ -46,5 +46,17 @@ namespace ParcialPoo_Vásquez.Clases
             Nota = nota;
         }
 
+        // Método aritmético para calcular puntos
+        public double CalcularPuntos()
+        {
+            return Nota * Materia.Creditos; // Puntos = Nota * Créditos
+        }
+
+        // Método MostrarDatos para implementar la interfaz IMostrable
+        public void MostrarDatos()
+        {
+            // Mostrar información de la calificación
+            Console.WriteLine($"Calificación → Estudiante: {Estudiante.Nombre}, Materia: {Materia.Nombre}, Nota: {Nota}");
+        }
     }
 }
