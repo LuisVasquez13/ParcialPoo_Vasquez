@@ -24,5 +24,13 @@ public class Program
         e1.Calificaciones.Add(c1);
         e1.Calificaciones.Add(c2);
         e3.Calificaciones.Add(c3);
+
+        // Mostrar datos
+        Console.WriteLine("\n-- Operaciones aritméticas =");
+        Console.WriteLine($"Promedio {e1.Nombre}: {e1.CalcularPromedio():F2}"); // Formatear a 2 decimales
+        Console.WriteLine($"Carga semanal {m1.Nombre}: {m1.CalcularCargaSemanal(4)} horas");
+        Console.WriteLine($"Puntos {c1.Estudiante.Nombre} en {c1.Materia.Nombre}: {c1.CalcularPuntos():F2}"); // Formatear a 2 decimales
+        Console.WriteLine($"Matrícula con descuento ({e3.Nombre}): {((EstudianteBecado)e3).CalcularMatriculaConDescuento(1000):F2}\n");
+
     }
 }
