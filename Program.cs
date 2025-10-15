@@ -32,5 +32,20 @@ public class Program
         Console.WriteLine($"Puntos {c1.Estudiante.Nombre} en {c1.Materia.Nombre}: {c1.CalcularPuntos():F2}"); // Formatear a 2 decimales
         Console.WriteLine($"Matrícula con descuento ({e3.Nombre}): {((EstudianteBecado)e3).CalcularMatriculaConDescuento(1000):F2}\n");
 
+
+        // Demostrar polimorfismo con List<IMostrable> y MostrarDatos()
+        List<IMostrable> items = new List<IMostrable>()
+        {
+            // Agregar estudiantes y calificaciones a la lista
+            e1, e2, e3,
+            m1, m2, m3,
+            c1, c2, c3
+        };
+
+        Console.WriteLine("-- POLIMORFISMO: MostrarDatos() =");
+        foreach (IMostrable i in items) // Iterar sobre la lista de IMostrable
+        {
+            i.MostrarDatos(); // Llamar al método MostrarDatos (polimorfismo)
+        }
     }
 }
